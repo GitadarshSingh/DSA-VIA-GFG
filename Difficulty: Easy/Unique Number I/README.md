@@ -7,3 +7,24 @@ Output: </strong>2
 <strong>Output: </strong>20
 <strong>Explanation: </strong>Since 20 occurs once, while other numbers occur twice, 20 is the answer.</span></pre>
 <p><span style="font-size: 18px;"><strong>Constraints</strong><br>1 ≤&nbsp; arr.size()&nbsp; ≤ 10<sup>6</sup><br>0 ≤ arr[i] ≤ </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 18px;">10<sup>9</sup></span></p></div>
+
+
+
+Explanation : 
+
+if (i == n - 1 || arr[i] != arr[i + 1]) {
+    return arr[i];
+}
+✅ i == n - 1: If it's the last element, it's unique.
+
+✅ arr[i] != arr[i + 1]: If current element is not equal to the next, it's unique.
+
+👉 In either case, return it.
+
+
+Else:
+i += 2;
+🔁 Skip the current pair, since it's not unique.
+
+➡️ Move to the next potential unique number.
+
